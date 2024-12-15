@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore opportunities for youth empowerment and personal growth.">
+    <title>Opportunities - Youth Empowerment Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f9f9f9;
+            margin: 0;
+        }
+
+        header {
+            background-image: url('header-bg.jpg');
+            background-size: cover;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        header .logo h1 {
+            font-size: 2.5rem;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin: 1rem 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s ease, background-color 0.3s ease;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover {
+            background-color: #4CAF50;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .opportunities {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .opportunity {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            flex: 1 1 calc(33.333% - 2rem);
+            text-align: center;
+            padding: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .opportunity:hover {
+            transform: translateY(-10px);
+        }
+
+        .opportunity img, .opportunity iframe {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .opportunity h3 {
+            margin: 1rem 0 0.5rem;
+            color: #4CAF50;
+        }
+
+        .opportunity p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .opportunity a {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            background: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .opportunity a:hover {
+            background: #45a049;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            max-width: 600px;
+            width: 90%;
+        }
+
+        .modal-content h2 {
+            margin-bottom: 1rem;
+            color: #4CAF50;
+        }
+
+        .modal-content input, .modal-content textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .modal-content button {
+            padding: 10px 20px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .modal-content button:hover {
+            background: #45a049;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 1.5rem;
+            color: #333;
+            cursor: pointer;
+        }
+
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .opportunities {
+                flex-direction: column;
+            }
+
+            .opportunity {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index5.html">Home</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="resources2.html">Resources</a></li>
+                <li><a href="opportunities.html" class="active">Opportunities</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <section class="opportunities">
+            <div class="opportunity">
+                <img src="images/opportunity1.webp" alt="Internship Program">
+                <h3>Internship Program</h3>
+                <p>Gain hands-on experience and build your professional network through paid internships.</p>
+                <a href="javascript:void(0);" class="open-modal" data-opportunity="internship">Apply Now</a>
+            </div>
+
+            <div class="opportunity">
+                <img src="images/opportunity2.jpg" alt="Volunteer Opportunities">
+                <h3>Volunteer Opportunities</h3>
+                <p>Make an impact in your community by volunteering for youth empowerment programs.</p>
+                <a href="javascript:void(0);" class="open-modal" data-opportunity="volunteer">Join Us</a>
+            </div>
+
+            <div class="opportunity">
+                <iframe src="https://www.youtube.com/embed/4-RZRLdBpFc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h3>Online Workshops</h3>
+                <p>Enhance your skills through interactive online workshops focused on career growth and leadership.</p>
+                <a href="javascript:void(0);" class="open-modal" data-opportunity="workshop">Register Now</a>
+            </div>
+        </section>
+    </div>
+    <!-- Modal Section -->
+    <div class="modal" id="applyModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle">Apply for Opportunity</h2>
+            <form id="applyForm">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" placeholder="Why do you want to apply?" required></textarea>
+                <button type="submit">Submit Application</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Youth Empower Hub. All Rights Reserved.</p>
+    </footer>
+    <script>
+        // Open modal when an opportunity is clicked
+        const openModalButtons = document.querySelectorAll('.open-modal');
+        const modal = document.getElementById('applyModal');
+        const closeModal = document.querySelector('.close');
+        const applyForm = document.getElementById('applyForm');
+        const modalTitle = document.getElementById('modalTitle');
+
+        openModalButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                const opportunityType = e.target.getAttribute('data-opportunity');
+                showModal(opportunityType);
+            });
+        });
+
+        function showModal(opportunityType) {
+            modal.style.display = 'flex';
+
+            // Set the modal title and form fields based on the opportunity type
+            if (opportunityType === 'internship') {
+                modalTitle.textContent = 'Apply for Internship Program';
+            } else if (opportunityType === 'volunteer') {
+                modalTitle.textContent = 'Join Volunteer Opportunities';
+            } else if (opportunityType === 'workshop') {
+                modalTitle.textContent = 'Register for Online Workshop';
+            }
+
+            // Reset the form fields
+            applyForm.reset();
+        }
+
+        // Close the modal when the close button is clicked
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        // Close the modal if the user clicks outside the modal content
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        // Handle form submission
+        applyForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Application Submitted!');
+            modal.style.display = 'none';
+            applyForm.reset(); // Reset the form fields
+        });
+    </script>
+    
+
+</body>
+</html>

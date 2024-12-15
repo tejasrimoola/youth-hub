@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore a variety of educational resources for youth empowerment.">
+    <title>Resources - Youth Empowerment Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f9f9f9;
+            margin: 0;
+        }
+
+        header {
+            background-image: url('header-bg.jpg');
+            background-size: cover;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        header .logo h1 {
+            font-size: 2.5rem;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin: 1rem 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s ease, background-color 0.3s ease;
+            padding: 5px 10px; /* Optional: Adds padding for better click area */
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover {
+            color: #4CAF50;
+        }
+        nav ul li a:hover {
+            background-color: #4CAF50;
+            color: #333;
+        }
+
+        /* Active page highlighting */
+        nav ul li a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .resources {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .resource {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            flex: 1 1 calc(33.333% - 2rem);
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .resource img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .resource h3 {
+            margin: 1rem 0 0.5rem;
+            color: #4CAF50;
+        }
+
+        .resource p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .resource a {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            background: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .resource a:hover {
+            background: #45a049;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 10px;
+            padding: 1rem;
+            text-align: center;
+            max-width: 600px;
+            width: 90%;
+            position: relative;
+        }
+
+        .modal-content iframe {
+            width: 100%;
+            height: 315px;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 1.5rem;
+            color: #333;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .resources {
+                flex-direction: column;
+            }
+
+            .resource {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+
+        <nav>
+            <ul>
+                <li><a href="index5.html">Home</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="resources2.html" class="active">Resources</a></li>
+                <li><a href="opportunities.html">Opportunities</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <section class="resources">
+            <div class="resource">
+                <img src="images/resource1.jpg" alt="Resource 1">
+                <h3>Entrepreneurship Guide</h3>
+                <p>Learn how to start and grow your own business with our step-by-step guide.</p>
+                <a class="open-modal" data-video="https://www.youtube.com/embed/videoseries?list=PL1O57nCUQ-e8BLxsI8aPOqULptnwtSYOM">Learn More</a>
+            </div>
+            <div class="resource">
+                <img src="images/resource2.jpg" alt="Resource 2">
+                <h3>Digital Literacy</h3>
+                <p>Master the essential digital skills needed in today’s world.</p>
+                <a class="open-modal" data-video="https://www.youtube.com/embed/videoseries?list=PLcetZ6gSk9682A7ZAZq2s9IqB-y8Ng63e">Learn More</a>
+            </div>
+            <div class="resource">
+                <img src="images/resource3.avif" alt="Resource 3">
+                <h3>Mental Health Toolkit</h3>
+                <p>Access resources to support your mental well-being and resilience.</p>
+                <a class="open-modal" data-video="https://www.youtube.com/embed/LNSHjOO66qc">Explore</a>
+            </div>
+        </section>
+    </div>
+
+    <!-- Modal Section -->
+    <div class="modal" id="videoModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <iframe src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Youth Empower Hub. All Rights Reserved.</p>
+    
+    </footer>
+
+    <script>
+        // JavaScript for Modal
+        const modal = document.getElementById('videoModal');
+        const iframe = modal.querySelector('iframe');
+        const closeModal = modal.querySelector('.close');
+
+        document.querySelectorAll('.open-modal').forEach(button => {
+            button.addEventListener('click', () => {
+                const videoUrl = button.getAttribute('data-video');
+                iframe.src = videoUrl;
+                modal.style.display = 'flex';
+            });
+        });
+
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+            iframe.src = '';
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+                iframe.src = '';
+            }
+        });
+    </script>
+    
+</body>
+</html>
