@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A platform to empower youth through education, community, and opportunities.">
+    <title>Youth Empowerment Platform</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* General Reset */
+body, h1, h2, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    /* background-color:rgb(252, 221, 247); */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* This makes the background stay fixed while scrolling */
+    margin: 0;
+}
+
+/* Header and Navigation */
+header {
+    background-size: cover;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+header .logo h1 {
+    font-size: 2.5rem;
+}
+
+
+/* Remove underline */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 1rem 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;  /* Remove underline */
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 5px 10px; /* Optional: Adds padding for better click area */
+    border-radius: 5px;
+}
+
+/* Hover effect */
+nav ul li a:hover {
+    background-color: #4CAF50;
+    color: #333;
+}
+main{
+   /* background-color:rgb(252, 221, 247); */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* This makes the background stay fixed while scrolling */
+    margin: 0;
+}
+
+/* Active page highlighting */
+nav ul li a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Home content styles */
+.home-content {
+    text-align: center;
+    padding: 4rem 1rem;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.home-content h2 {
+    color: #4CAF50;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.home-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Button styles */
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+footer a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer .social-icons {
+    margin-top: 1rem;
+}
+
+footer .social-icons a {
+    color: white;
+    font-size: 30px;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    color: #ffd700;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .home-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .home-content p {
+        font-size: 1rem;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1>Youth Empowerment Hub</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index5.html">Home</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="resources2.html">Resources</a></li>
+                <li><a href="opportunities.html">Opportunities</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="home-content">
+            <h2>Welcome to Youth Empowerment Hub</h2>
+            <p>Your one-stop destination for tools, resources, and opportunities to help you succeed academically, personally, and professionally.</p>
+            <a href="aboutus.html" class="btn">Learn More About Us</a>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Youth Empowerment Hub. All Rights Reserved.</p>
+        <p>Follow us on:</p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/archana_budidhi/" target="_blank" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/919391023225" target="_blank" title="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="mailto:archanabudidhi@gmail.com" target="_blank" title="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+    </footer>
+    <script>
+        // JavaScript to set the active class dynamically
+const links = document.querySelectorAll('nav ul li a');
+links.forEach(link => {
+    if (link.href === window.location.href) {
+        link.classList.add('active');
+    }
+});
+    </script>
+</body>
+</html>
